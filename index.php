@@ -3,7 +3,7 @@ require __DIR__ . "/vendor/autoload.php";
 
 use CoffeeCode\Router\Router;
 
-$router = new Router("https://localhost");
+$router = new Router("https://localhost/mvc");
 
 /**
  * routes
@@ -13,22 +13,16 @@ $router = new Router("https://localhost");
 $router->namespace("Source\App");
 
 $router->get("/", "Web:home");
+$router->get("/name", "Web:name");
+$router->post("/name/{name}", "Web:name");
 
-/**
- * group by routes and namespace
- * this produces routes for /admin/route and /admin/route/$id
- * The controller must be in the namespace Dash\Controller
- */
-$router->group("admin")->namespace("Dash");
-$router->get("/route", "Controller:method");
-$router->post("/route/{id}", "Controller:method");
 
 /**
  * Group Error
  * This monitors all Router errors. Are they: 400 Bad Request, 404 Not Found, 405 Method Not Allowed and 501 Not Implemented
  */
-$router->group("error")->namespace("Test");
-$router->get("/{errcode}", "Coffee:notFound");
+$router->group("error");
+$router->get("/{errcode}", "Web:error");
 
 /**
  * This method executes the routes

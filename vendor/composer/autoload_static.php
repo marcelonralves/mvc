@@ -11,6 +11,10 @@ class ComposerStaticInitb13e4ffc2921cd07eb28f8221ee542cb
         array (
             'Source\\' => 7,
         ),
+        'L' => 
+        array (
+            'League\\Plates\\' => 14,
+        ),
         'C' => 
         array (
             'CoffeeCode\\Router\\' => 18,
@@ -21,6 +25,10 @@ class ComposerStaticInitb13e4ffc2921cd07eb28f8221ee542cb
         'Source\\' => 
         array (
             0 => __DIR__ . '/../..' . '/source',
+        ),
+        'League\\Plates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/plates/src',
         ),
         'CoffeeCode\\Router\\' => 
         array (
