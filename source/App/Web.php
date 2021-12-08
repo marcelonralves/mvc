@@ -10,7 +10,7 @@ class Web
 
     public function __construct()
     {
-        $this->templates = new Engine(__DIR__."/../../themes/web/");
+        $this->templates = new Engine(__DIR__."/../../themes/".CONF_DIR_DEFAULT."/");
     }
 
     public function home() : void
