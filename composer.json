@@ -1,0 +1,23 @@
+{
+  "name": "marcelonralves/mvc",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marcelo Alves",
+      "email": "marcelonralves@gmail.com"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    }
+  },
+  "require": {
+    "coffeecode/router": "^1.0"
+  }
+}
